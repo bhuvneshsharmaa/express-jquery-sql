@@ -5,6 +5,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.set('view engine','hbs')
 const db=require('./db')
+//api for fetching data and update it from the table
 const api=require('./routes/api')
 app.use('/api',api)
 app.get('/',(req,res)=>{
